@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Lab_5</title>
+    <link href="~/logo.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <!-- Below i added the logo file to give my website more professional look-->
+    <div>
+        <center>
+            <img src="~/netdlogo.png">
+        </center>
+    </div>
+    <!--below is the navigation bar commonly used for all the pages-->
+    <ul>
+        <li><a href="~/Home/Index">Home</a></li>
+        <li><a class="active" href="~/Students">Students</a></li>
+        <li><a href="~/Home/About">About Me</a></li>
+        <li><a href="~/Home/ThisSite">What's This Site</a></li>
+        <li><a href="~/Home/Contact">Contact Us</a></li>
+    </ul>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - Lab_5 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

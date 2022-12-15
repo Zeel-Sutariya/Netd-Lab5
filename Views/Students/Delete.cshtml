@@ -1,0 +1,47 @@
+﻿@model Lab_5.Models.Student
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h6>Are you sure you want to delete this?</h6>
+<!-- Below is the auto generated code for the delete-->
+<div>
+    <h4>Student</h4>
+    <hr />
+    <!--Displaying the data-->
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.firstName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.firstName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.lastName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.lastName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.courseName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.courseName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.courseDuration)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.courseDuration)
+        </dd>
+    </dl>
+    <!--Delete button to delete the data-->
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="studentID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
